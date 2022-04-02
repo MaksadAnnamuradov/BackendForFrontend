@@ -37,7 +37,7 @@ namespace Api
                        c.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
                        {
                            ValidateAudience = true,
-                           ValidAudiences = Configuration["Auth0:Audience"].Split(";"),
+                           ValidAudiences = Configuration["Auth0:ApiAudience"].Split(";"),
                            ValidateIssuer = true,
                            ValidIssuer = $"https://{Configuration["Auth0:Domain"]}"
                        };
